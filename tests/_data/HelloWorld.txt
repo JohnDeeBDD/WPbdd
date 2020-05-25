@@ -1,0 +1,3 @@
+tests/acceptance/HelloWorldShortcodeCept.php
+tests/unit/ShortcodeHelloWorldTest.php
+

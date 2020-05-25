@@ -1,0 +1,28 @@
+actor: AcceptanceTester
+modules:
+    enabled:
+       # - WPDb
+        - WPWebDriver
+        - Asserts
+        - \Helper\Acceptance
+    config:
+        #WPDb:
+        #    dsn: 'mysql:host=localhost;dbname=wordpress'
+        #    user: 'wordpressuser'
+        #    password: 'password'
+        #    populate: false
+        #    cleanup: false
+        #    url: 'http://localhost'
+        #    urlReplacement: false #replace the hardcoded dump URL with the one above
+        #    tablePrefix: 'wp_'
+            #dump: 'tests/_data/WPbddActive.sql'
+            #populator: 'sudo mysql wordpress < tests/_data/WPbddActive.sql -p'
+        WPWebDriver:
+            url: 'http://ec2-3-84-130-26.compute-1.amazonaws.com'
+            window_size: maximize
+            adminUsername: 'admin'
+            adminPassword: 'password'
+            adminPath: '/wp-admin'
+            port: 4444
+            #browser: phantomjs #./phantomjs --webdriver=4444
+            browser: chrome #java -jar selenium.jar

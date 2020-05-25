@@ -1,0 +1,14 @@
+actor: AcceptanceTester
+modules:
+   enabled:
+      - WebDriver:
+         url: 'ec2-18-217-207-213.us-east-2.compute.amazonaws.com' # Site URL
+         browser: chrome
+         port: '4444'
+         window_size: false
+         capabilities:
+          chromeOptions:
+            args: ["--headless", "--disable-gpu"]
+            #binary: "chrome"
+            binary: "/usr/bin/google-chrome" # Path to Chrome binary
+            #binary: "//Applications/MAMP/htdocs/wp-content/plugins/parler-wordpress-php/chromedriver"

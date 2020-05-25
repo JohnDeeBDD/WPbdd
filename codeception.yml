@@ -1,0 +1,26 @@
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+        #
+        # You can turn off Phantoman and run PhontomJS in a seperate 
+        # process. That will be faster. The commands to launch PhantomJS are:
+        # cd //var/www/html/wp-content/plugins/WPbdd
+        # ./phantomjs --webdriver=4444
+        #
+        - Codeception\Extension\Phantoman
+    config:
+        Codeception\Extension\Phantoman:
+            path: '/var/www/html/wp-content/plugins/WPbdd/phantomjs'
+            debug: true
+            sslProtocol: any
+            ignoreSslErrors: true
+groups:
+  # requiring a group file
+  HelloWorld: tests/_data/HelloWorld.txt
