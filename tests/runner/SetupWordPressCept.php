@@ -21,9 +21,10 @@ $stringData = "define('FS_METHOD', 'direct');\n";
 fwrite($fh, $stringData);
 fclose($fh);
 $myFile = "/etc/apache2/apache2.conf";
-$fh = fopen($myFile, 'a') or die("can't open file");
+/*$fh = fopen($myFile, 'a') or die("can't open file");
 $stringData = "<Directory /var/www/html/>
 AllowOverride All
 </Directory>";
 fwrite($fh, $stringData);
 fclose($fh);
+*/
