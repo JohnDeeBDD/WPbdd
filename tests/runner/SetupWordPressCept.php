@@ -10,7 +10,7 @@ $I->click('.button');
 $I->fillField('weblog_title', 'General Chicken Cloud Dev Server');
 $I->fillField('user_name', 'admin');
 //$I->fillField('#pass1-text', 'password');
-$I->fillField(['id' => 'pass1-text'], 'password');
+$I->fillField(['id' => 'pass1'], 'password');
 $I->fillField('admin_email', 'johndeebdd@gmail.com');
 $I->checkOption('pw_weak');
 $I->click('#submit');
