@@ -8,10 +8,10 @@ $I->fillField('uname', 'wordpressuser');
 $I->click('.button');
 $I->click('.button');
 $I->fillField('weblog_title', 'General Chicken Cloud Dev Server');
-$I->fillField('user_name', 'admin');
+$I->fillField('user_name', 'Codeception');
 //$I->fillField('#pass1-text', 'password');
 $I->fillField(['id' => 'pass1'], 'password');
-$I->fillField('admin_email', 'johndeebdd@gmail.com');
+$I->fillField('admin_email', 'admin@email.com');
 $I->checkOption('pw_weak');
 $I->click('#submit');
 sleep(3);
@@ -20,11 +20,4 @@ $fh = fopen($myFile, 'a') or die("can't open file");
 $stringData = "define('FS_METHOD', 'direct');\n";
 fwrite($fh, $stringData);
 fclose($fh);
-$myFile = "/etc/apache2/apache2.conf";
-/*$fh = fopen($myFile, 'a') or die("can't open file");
-$stringData = "<Directory /var/www/html/>
-AllowOverride All
-</Directory>";
-fwrite($fh, $stringData);
-fclose($fh);
-*/
+ 
