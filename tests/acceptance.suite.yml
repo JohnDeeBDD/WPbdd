@@ -2,7 +2,7 @@ actor: AcceptanceTester
 modules:
    enabled:
       - WebDriver:
-         url: 'ec2-18-217-207-213.us-east-2.compute.amazonaws.com' # Site URL
+         url: 'http://replaceme.com/' # Site URL
          browser: chrome
          port: '4444'
          window_size: false
