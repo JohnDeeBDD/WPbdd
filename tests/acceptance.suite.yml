@@ -2,7 +2,7 @@ actor: AcceptanceTester
 modules:
    enabled:
       - WebDriver:
-         url: 'http://replaceme.com/' # Site URL
+         url: 'http://13.59.94.67/' # Site URL
          browser: chrome
          port: '4444'
          window_size: false
