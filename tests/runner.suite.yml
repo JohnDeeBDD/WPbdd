@@ -5,7 +5,7 @@ modules:
     - WPWebDriver
   config:
     WPWebDriver:
-      url: 'http://13.59.94.67/'
+      url: 'http://3.16.56.172/'
       window_size: 800,480
       adminUsername: 'admin'
       adminPassword: 'password'
