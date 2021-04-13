@@ -5,7 +5,7 @@ modules:
     - WPWebDriver
   config:
     WPWebDriver:
-      url: 'http://3.16.56.172/'
+      url: 'http://replaceme.com/'
       window_size: 800,480
       adminUsername: 'admin'
       adminPassword: 'password'
