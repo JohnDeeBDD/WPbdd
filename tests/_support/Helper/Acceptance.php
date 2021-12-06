@@ -13,4 +13,10 @@ class Acceptance extends \Codeception\Module
         //$I->addStep('vvvvvvvvvvvvvvv');
     	$I->amOnUrl('http://google.com');
     }
+    
+    function reconfigureThisVariable($array){
+        $this->getModule('WPWebDriver')->_reconfigure($array);
+        $this->getModule('WPWebDriver')->_restart();
+    
+    }
 }

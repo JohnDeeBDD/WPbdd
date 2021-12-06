@@ -1,5 +1,10 @@
 <?php 
 $I = new AcceptanceTester($scenario);
+
+$commandToGetLocalIP = "dig +short myip.opendns.com @resolver1.opendns.com";
+$IP = shell_exec($commandToGetLocalIP);
+$IP = substr_replace($IP, "", -1);
+$I->reconfigureThisVariable(['url' => "http://$IP/"]);
 $I->wantTo('Setup WordPress');
 $I->amOnPage("/wp-admin/setup-config.php?step=1");
 $I->see("Below you should enter your database connection details.");
@@ -20,4 +25,3 @@ $fh = fopen($myFile, 'a') or die("can't open file");
 $stringData = "define('FS_METHOD', 'direct');\n";
 fwrite($fh, $stringData);
 fclose($fh);
- 
