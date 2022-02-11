@@ -25,3 +25,4 @@ $fh = fopen($myFile, 'a') or die("can't open file");
 $stringData = "define('FS_METHOD', 'direct');\n";
 fwrite($fh, $stringData);
 fclose($fh);
+

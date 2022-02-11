@@ -10,6 +10,6 @@ EOF
 cd /var/www/html
 sudo rm wp-config.php
 cd /var/www/html/wp-content/plugins/WPbdd/
-bin/codecept run runner SetupWordPressCept.php -vvv
+bin/codecept run acceptance SetupWordPressCept.php -vvv
 wp rewrite structure '/%postname%/'
 wp option update uploads_use_yearmonth_folders 0

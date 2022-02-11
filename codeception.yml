@@ -7,7 +7,4 @@ paths:
 actor_suffix: Tester
 extensions:
     enabled:
-    config:
-groups:
-  # requiring a group file
-  HelloWorld: tests/_data/HelloWorld.txt
+        - Codeception\Extension\RunFailed
