@@ -6,8 +6,9 @@ modules:
   config:
     WPWebDriver:
       url: 'xxx'
-      window_size: 800,480
-      adminUsername: 'admin'
+      #window_size: 1600, 960
+      window_size: maximize
+      adminUsername: 'Codeception'
       adminPassword: 'password'
       clear_cookies: true
       adminPath: /wp-admin
@@ -19,6 +20,7 @@ modules:
         capabilities:
           chromeOptions:
             args: ["--headless", "--disable-gpu", "--disable-dev-shm-usage", "--no-sandbox"]
+            #args: ["start-fullscreen"]
             #binary: "/usr/bin/google-chrome" # Path to Chrome binary
             binary: "/var/www/chromedriver" # Path to Chrome binary
       #binary: "//Applications/MAMP/htdocs/wp-content/plugins/parler-wordpress-php/chromedriver"
