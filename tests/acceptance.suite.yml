@@ -1,14 +1,26 @@
-actor: AcceptanceTester
+class_name: AcceptanceTester
 modules:
-   enabled:
-      - WebDriver:
-         url: 'http://google.com/' # Site URL
-         browser: chrome
-         port: '4444'
-         window_size: false
-         capabilities:
+  enabled:
+    - \Helper\Acceptance
+    - WPWebDriver
+  config:
+    WPWebDriver:
+      url: 'xxx'
+      #window_size: 1600, 960
+      window_size: maximize
+      adminUsername: 'Codeception'
+      adminPassword: 'password'
+      clear_cookies: true
+      adminPath: /wp-admin
+      port: 4444 #chromedriver --url-base=/wd/hub
+      #browser: phantomjs #./phantomjs --webdriver=4444
+      #nohup xvfb-run java -Dwebdriver.chrome.driver=/var/www/html/wp-content/plugins/WPbdd/chromedriver -jar selenium.jar &>/dev/null &
+      ## ^^ requires the corect versions of chromedriver and chrome
+      browser: chrome #java -jar selenium.jar
+        capabilities:
           chromeOptions:
-            args: ["--headless", "--disable-gpu"]
-            #binary: "chrome"
-            binary: "/usr/bin/google-chrome" # Path to Chrome binary
-            #binary: "//Applications/MAMP/htdocs/wp-content/plugins/parler-wordpress-php/chromedriver"
+            args: ["--headless", "--disable-gpu", "--disable-dev-shm-usage", "--no-sandbox"]
+            #args: ["start-fullscreen"]
+            #binary: "/usr/bin/google-chrome" # Path to Chrome binary
+            binary: "/var/www/chromedriver" # Path to Chrome binary
+      #binary: "//Applications/MAMP/htdocs/wp-content/plugins/parler-wordpress-php/chromedriver"
