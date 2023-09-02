@@ -7,5 +7,4 @@ CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 GRANT ALL PRIVILEGES ON * . * TO 'wordpressuser'@'localhost';
 FLUSH PRIVILEGES;
 EOF
-cd /var/www/html
-sudo rm wp-config.php
+sudo /var/www/html/rm wp-config.php
